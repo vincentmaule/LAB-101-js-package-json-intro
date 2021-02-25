@@ -8,9 +8,10 @@ Allow person/developer to run a specific script: `npm run server`
 
 Allow person/developer install software such as npm-run-all `npm install --save-dev npm-run-all` 
 
-`{
-  "name": "sassy-project",
-  "version": "1.0.0",
+```
+{  
+"name": "sassy-project",  
+  "version": "1.0.0",  
   "scripts": {
     "dev:server": "live-server",
     "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
@@ -25,7 +26,8 @@ Allow person/developer install software such as npm-run-all `npm install --save-
     "npm-run-all": "^4.1.5",
     "surge": "^0.21.3"
   }
-}`
+}
+```
 
 With a `package.json` file like this, all the use would have to do is run npm run deploy, build, or whatever else need be.
 
