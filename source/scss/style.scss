@@ -1,0 +1,71 @@
+@import "_variables";
+
+body {
+  margin: 0;
+  background-color: #333;
+  color: $c_white;
+
+  table {
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 0;
+      border-left: 0;
+      border-right: 1px solid $c_grey;
+      border-bottom: 1px solid $c_grey;
+      border-bottom-right-radius: 6px;
+      background-color: #777;
+      box-shadow: $c_black 0 0 15px;
+      font-family: $font_family;
+
+      h1 {
+        margin: 0 10px;
+        font-size: 20px;
+      }
+
+      td {
+        text-align: center;
+
+        .label {
+          width: 80px;
+        }
+
+        .label,
+        .result {
+          text-align: right;
+        }
+      }
+
+      button {
+        width: 80%;
+        background-color: #ccf;
+        color: $c_black;
+        text-align: center;
+        font-family: $font_family;
+        font-weight: normal;
+        font-size: 12px;
+        border: 1px solid $c_grey;
+        transition: width 0.5s, background-color 0.5s;
+        border-radius: 3px;
+      }
+
+      button:active,
+      button:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .clicky {
+    position: absolute;
+    border-radius: 50%;
+    background-color: #aaf;
+    order: 1px solid $c_grey;
+    box-shadow: $c_black 0 0 15px;
+
+    .clicky:hover {
+      cursor: pointer;
+    }
+  }
+}

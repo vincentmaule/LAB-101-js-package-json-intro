@@ -1,0 +1,25 @@
+{
+    "name": "intro-to-json",
+    "version": "1.0.0",
+    "scripts": {
+        "dev:server": "live-server",
+        "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
+        "dev": "run-p dev:*",
+        "build:htmlhint": "htmlhint index.html",
+        "build:standard": "standard", 
+        "build:stylelint": "stylelint **/*.scss",
+        "build": "run-p build:*",
+        "deploy:surge": "surge --project . --domain https://optimisticshagg-js-package-jso.surge.sh/",
+        "deploy": "run-s build:* deploy:surge"
+    },
+    "devDependencies": {
+        "htmlhint": "^0.14.2",
+        "live-server": "^1.2.1",
+        "node-sass": "^5.0.0",
+        "npm-run-all": "^4.1.5",
+        "standard": "^16.0.3",
+        "stylelint": "^13.11.0",
+        "stylelint-config-standard": "^20.0.0",
+        "surge": "^0.21.7"
+    }
+}
