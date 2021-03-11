@@ -1,4 +1,4 @@
-@import "_variables";
+@import '_variables.scss';
 
 body {
   margin: 0;
@@ -6,7 +6,7 @@ body {
   color: $c_white;
 
   table {
-    .menu {
+    &.menu {
       position: absolute;
       top: 0;
       left: 0;
@@ -27,12 +27,12 @@ body {
       td {
         text-align: center;
 
-        .label {
+        &.label {
           width: 80px;
         }
 
-        .label,
-        .result {
+        &.label,
+        &.result {
           text-align: right;
         }
       }
@@ -40,7 +40,7 @@ body {
       button {
         width: 80%;
         background-color: #ccf;
-        color: $c_black;
+        color: #111;
         text-align: center;
         font-family: $font_family;
         font-weight: normal;
@@ -48,11 +48,18 @@ body {
         border: 1px solid $c_grey;
         transition: width 0.5s, background-color 0.5s;
         border-radius: 3px;
-      }
 
-      button:active,
-      button:focus {
-        outline: none;
+        &:active,
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: #ddf;
+          width: 85%;
+          transition: width 0.5s, background-color 0.5s;
+        }
       }
     }
   }
@@ -64,7 +71,7 @@ body {
     order: 1px solid $c_grey;
     box-shadow: $c_black 0 0 15px;
 
-    .clicky:hover {
+    &:hover {
       cursor: pointer;
     }
   }

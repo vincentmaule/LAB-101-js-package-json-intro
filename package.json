@@ -4,13 +4,14 @@
     "scripts": {
         "dev:server": "live-server",
         "dev:sass": "node-sass source/scss/style.scss --watch --output=compiled/css --output-style=compressed --source-map=true",
-        "dev": "run-p dev:*",
+        "dev": "run-p dev:* build:sass",
         "build:htmlhint": "htmlhint index.html",
         "build:standard": "standard", 
         "build:stylelint": "stylelint **/*.scss",
-        "build": "run-p build:*",
+        "build:sass": "node-sass source/scss/style.scss --output=compiled/css --output-style=compressed --source-map=true",
+        "build": "run-s build:*",
         "deploy:surge": "surge --project . --domain https://optimisticshagg-js-package-jso.surge.sh/",
-        "deploy": "run-s build:* deploy:surge"
+        "deploy": "run-s build deploy:surge"
     },
     "devDependencies": {
         "htmlhint": "^0.14.2",
